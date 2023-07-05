@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <h1>Hello friend</h1>
-      <h4>How are u?</h4>
     </>
   )
 }
