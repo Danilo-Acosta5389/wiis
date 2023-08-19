@@ -2,7 +2,7 @@
 **/bin/*
 **/obj/*
 .vs/
-wiis/.vs # Change this to the name of your git repo for Visual Studio git connection to work
+backend/WIISWebAPI/.vs # Change this to the name of your git repo for Visual Studio git connection to work
 
 # Logs
 logs
