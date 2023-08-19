@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import React from 'react'
+
+import Title from './Title.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>Hello friend</h1>
+      <Title />
     </>
   )
 }
