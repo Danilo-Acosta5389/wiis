@@ -1,0 +1,1 @@
+// Page that encurages user to participate in quiz
