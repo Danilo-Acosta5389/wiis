@@ -19,7 +19,7 @@ function About() {
     return(
     <AboutContainer>
       <h1>{aboutHeader}</h1>
-      <p>{aboutInfo}</p>
+      {/* <p>{aboutInfo}</p> */}
     </AboutContainer>
     );
 }
