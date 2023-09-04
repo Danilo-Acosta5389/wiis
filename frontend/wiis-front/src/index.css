@@ -97,10 +97,6 @@ h1 {
   transition: transform 0.2s ease-in-out;
 }
 
-.checkbox:checked~.menu-items {
-  transform: translateX(0);
-}
-
 .checkbox:checked~.hamburger-lines .line1 {
   transform: rotate(-45deg);
 }
@@ -115,3 +111,34 @@ h1 {
 }
 
 /* --------------- Hamburger END ---------------- */
+
+/* --------------- Menu and items --------------- */
+
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90vh;
+  padding-top: 20vh;
+  padding-right: 20vw;
+  padding-bottom: 60vh;
+  background: rgba(83, 83, 83, 0.488);
+  
+  transform: translate(100vw);
+  transition: transform 0.5s ease-in-out;
+  /* box-shadow: 5px 0px 10px 0px #aaa; */
+  height: max-content;
+  width: max-content;
+  /* padding-top: 200px;
+  padding-right: 200px; */
+  font-size: 1.5rem;
+}
+
+ .checkbox:checked~.menu-items {
+   transform: translateX(30vw);
+ }
+
+ .menu-items a {
+    color: green;
+    text-decoration: none;
+ }
