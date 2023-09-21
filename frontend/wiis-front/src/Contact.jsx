@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const ContactContainer = styled.section`
   display: flex;
   flex-direction: column;
+  text-shadow: 1px 1px 5px black;
   height: 100vh;
   width: 100vw;
   & h1 {

@@ -9,7 +9,7 @@ justify-content: center;
 /* border: 3px solid red; */
 height: 5em;
 width: 100%;
-z-index: 2;
+z-index: 3;
 position: fixed;
 `;
 
@@ -38,7 +38,7 @@ function Nav() {
               {jsonStart}<br/>
                 &nbsp;   <a href=''>Login,</a><br/>
                 &nbsp;   <a href=''>Menu,</a><br/>
-                &nbsp;   <a href=''>about,</a><br/>
+                &nbsp;   <a href=''>About,</a><br/>
                 &nbsp;   <a href=''>Contact</a><br/>
               {jsonEnd}
               </p>

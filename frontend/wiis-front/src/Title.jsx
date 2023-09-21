@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TitleContainer = styled.section`
+position: relative;
 display: flex;
 flex-direction: column;
+text-shadow: 1px 1px 5px black;
 height: 100vh;
 width: 100vw;
+z-index: 1;
 `;
 
 

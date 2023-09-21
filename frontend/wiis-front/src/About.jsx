@@ -7,6 +7,7 @@ const AboutContainer = styled.section`
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  text-shadow: 1px 1px 5px black;
   & h1 {
     position: relative;
   }
@@ -18,7 +19,7 @@ const AboutHeader = styled.h1`
   transition-duration: 1000ms;
   transition-property: transform;
   transition-timing-function: ease-in-out;
-  z-index: 1;
+  z-index: 2;
   
   &.transform {
     transform: translateY(-6em);
@@ -38,7 +39,7 @@ const AboutInfo = styled.p`
   text-align: center;
   flex-wrap: wrap;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   opacity: 0;
   transition-duration: 300ms;
   transition-property: opacity;
