@@ -29,8 +29,10 @@ const AboutHeader = styled.h1`
 
 
 
-const aboutText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae consequat sapien. Integer tempor urna eu commodo consequat. Maecenas aliquet vestibulum ex, in tristique arcu accumsan ut. Sed eleifend scelerisque ullamcorper. Quisque lobortis metus turpis. Praesent vulputate nibh ut est varius consectetur. Nam tristique arcu id pharetra posuere. Aenean sodales semper metus, ut ornare diam pharetra non.";
+//const aboutText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae consequat sapien. Integer tempor urna eu commodo consequat. Maecenas aliquet vestibulum ex, in tristique arcu accumsan ut. Sed eleifend scelerisque ullamcorper. Quisque lobortis metus turpis. Praesent vulputate nibh ut est varius consectetur. Nam tristique arcu id pharetra posuere. Aenean sodales semper metus, ut ornare diam pharetra non.";
+const aboutText = `Welcome to [What is Space], where art, technology, and the power of collective sound converge.
 
+Join us in this immersive journey where technology amplifies human connection, and the collective debate is not just a discussion but an art form. Be part of [What is Space] – where art, technology, and human expression converge in a symphony of innovation. `;
 
 const AboutInfo = styled.p`
   display: flex;
