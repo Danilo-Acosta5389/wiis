@@ -25,7 +25,7 @@ const AboutHeader = styled.h1`
   z-index: 2;
   
   &.transform {
-    transform: translateY(-4.5em);
+    transform: translateY(-5em);
 
 }
 `;
