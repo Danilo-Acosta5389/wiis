@@ -8,6 +8,9 @@ const AboutContainer = styled.section`
   height: 100vh;
   width: 100vw;
   text-shadow: 1px 1px 5px black;
+
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
   & h1 {
     position: relative;
   }
@@ -22,7 +25,7 @@ const AboutHeader = styled.h1`
   z-index: 2;
   
   &.transform {
-    transform: translateY(-6em);
+    transform: translateY(-4.5em);
 
 }
 `;

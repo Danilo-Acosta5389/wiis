@@ -7,6 +7,8 @@ const ContactContainer = styled.section`
   text-shadow: 1px 1px 5px black;
   height: 100vh;
   width: 100vw;
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
   & h1 {
     position: relative;
   }
