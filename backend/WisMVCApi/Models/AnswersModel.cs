@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 
 #nullable disable
@@ -11,13 +12,13 @@ namespace WisMVCApi.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [AllowNull]
         public string Text { get; set; }
 
-        [Required]
-        public int Number { get; set; }
+        [AllowNull]
+        public int? Number { get; set; }
 
-        [Required]
+        [AllowNull]
         public string IpAddress { get; set; }
 
         [Required]

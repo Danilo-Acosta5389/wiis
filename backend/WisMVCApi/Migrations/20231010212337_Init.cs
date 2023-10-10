@@ -28,9 +28,9 @@ namespace WisMVCApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Number = table.Column<int>(type: "int", nullable: false),
-                    IpAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Text = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Number = table.Column<int>(type: "int", nullable: true),
+                    IpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     QuestionId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -42,6 +42,30 @@ namespace WisMVCApi.Migrations
                         principalTable: "Questions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Questions",
+                columns: new[] { "Id", "Text", "Title" },
+                values: new object[,]
+                {
+                    { 1, "Yes / No/Don’t know what a cyborg is", "Are we cyborgs?" },
+                    { 2, "1-5", "Do technology set us free?" },
+                    { 3, "1-5", "Are you worried about the future?" },
+                    { 4, "1-5", "Does our job define us?" },
+                    { 5, "1-5", "How would you describe your mental health?" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Answers",
+                columns: new[] { "Id", "IpAddress", "Number", "QuestionId", "Text" },
+                values: new object[,]
+                {
+                    { 1, null, 5, 1, null },
+                    { 2, null, 4, 2, null },
+                    { 3, null, 2, 3, null },
+                    { 4, null, 5, 4, null },
+                    { 5, null, 5, 5, null }
                 });
 
             migrationBuilder.CreateIndex(
