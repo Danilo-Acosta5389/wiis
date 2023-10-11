@@ -24,7 +24,7 @@ const SurveyHeader = styled.h1`
 function Survey() {
     return(
         <SurveyContainer>
-          <SurveyHeader>Take the Survey</SurveyHeader>
+          <SurveyHeader><a href="https://docs.google.com/forms/d/e/1FAIpQLSdMp-nVHdB-_KylXQTQMuioF9A5Ch5sG-RnwAXZpIqgKJj8rg/viewform?usp=sf_link" target="_blank">Take the Survey</a></SurveyHeader>
         </SurveyContainer>
     );
 }
