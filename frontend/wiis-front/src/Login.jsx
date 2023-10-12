@@ -16,13 +16,20 @@ const LoginContainer = styled.div`
         padding-top: 7rem;
     }
 
-    & h4 {
+    & h3 {
         margin-bottom: 5px;
+        font-size: larger;
+    }
+
+    & input {
+        width: 10rem;
+        height: 1.4rem;
     }
 
     & form > button {
-        height: 2rem;
-        width: 3rem;
+        height: 2.7rem;
+        width: 4rem;
+        font-size: large;
     }
 /* 
     & form {
@@ -46,9 +53,9 @@ export function Login() {
         <LoginContainer>
             <h1>Login</h1>
             <form>
-                <h4>UserName</h4>
+                <h3>UserName</h3>
                 <input type="text"/>
-                <h4>Passwd</h4>
+                <h3>Passwd</h3>
                 <input type='password'/>
                 <br></br><br></br>
                 <button>Enter</button>
