@@ -61,6 +61,8 @@ const AboutInfo = styled.p`
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.3;
 
+  max-width: 330px;
+
   &.show {
     opacity: 1;
     transition-delay: 600ms;

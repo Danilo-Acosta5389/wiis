@@ -24,7 +24,7 @@ const ContactHeader = styled.h1`
   z-index: 1;
   
   &.transform {
-    transform: translateY(-5em);
+    transform: translateY(-3.2em);
 
 }
 `;
@@ -45,9 +45,11 @@ const ContactInfo = styled.p`
   border-radius: 6px;
   padding: 8px;
   background-color: #000000c9;
-  font-size: large;
+  font-size: 19px;
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.3;
+
+  max-width: 300px;
 
   &.show {
     opacity: 1;
@@ -72,9 +74,11 @@ const imageOfLonelyRoad = "https://images.pexels.com/photos/1853542/pexels-photo
 function ContactText() {
   return(
     <p>
-      Maecenas vitae consequat sapien. Integer tempor urna eu commodo consequat. 
-      Maecenas aliquet vestibulum ex, in tristique arcu accumsan ut. Sed eleifend scelerisque ullamcorper.
-      Quisque lobortis metus turpis. Praesent vulputate nibh ut est varius consectetur.
+      Email us: digitalMdnezz@wis.online
+      <br></br>
+      <br></br>
+      Find us: Maecenas aliquet 89, 112 91, Barcelona.
+      <br></br>
     </p>
 
   );
