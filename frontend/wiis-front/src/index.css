@@ -2,10 +2,8 @@
 
 
 :root {
-  scroll-snap-type: y proximity;
-
-  overflow-y: scroll;
-
+  /* scroll-snap-type: y proximity; */
+  /* overflow-y: scroll; */
   font-family: 'Orbitron', sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -38,8 +36,8 @@ body {
 } */
 
 section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
 
   display: flex;
   align-items: center;
