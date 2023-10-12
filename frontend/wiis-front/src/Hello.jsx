@@ -15,7 +15,10 @@ const HelloContainer = styled.div`
 
 `;
 
+console.log("Hello friend. Join us.");
+
 function Hello() {
+    
     return(
         <HelloContainer>
         <h1>Hello Friend</h1>

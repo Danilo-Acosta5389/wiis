@@ -76,9 +76,9 @@ const AboutInfo = styled.p`
 
 function AboutText() {
   return(
-    <p>Welcome to <br></br>[What is Space], where art, technology, and the power of collective sound converge.
+    <span>Welcome to <br></br>[What is Space], where art, technology, and the power of collective sound converge.
 
-Join us in this immersive journey where technology amplifies human connection, and the collective debate is not just a discussion but an art form. Be part of [What is Space] – where art, technology, and human expression converge in a symphony of innovation.</p>
+Join us in this immersive journey where technology amplifies human connection, and the collective debate is not just a discussion but an art form. Be part of [What is Space] – where art, technology, and human expression converge in a symphony of innovation.</span>
   )
 }
 
@@ -94,7 +94,7 @@ function About() {
         aboutSelect.classList.remove('transform');
         aboutTextShow.classList.remove('show');
       } else {
-        console.log('clicked');
+        // console.log('clicked');
         aboutSelect.classList.add('transform');
         aboutTextShow.classList.add('show');
       }

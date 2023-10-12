@@ -73,13 +73,13 @@ const imageOfLonelyRoad = "https://images.pexels.com/photos/1853542/pexels-photo
 
 function ContactText() {
   return(
-    <p>
+    <span>
       Email us: digitalMdnezz@wis.online
       <br></br>
       <br></br>
       Find us: Maecenas aliquet 89, 112 91, Barcelona.
       <br></br>
-    </p>
+    </span>
 
   );
 }
@@ -95,7 +95,7 @@ function Contact() {
         contactSelect.classList.remove('transform');
         contactTextShow.classList.remove('show');
       } else {
-        console.log('clicked');
+        // console.log('clicked');
         contactSelect.classList.add('transform');
         contactTextShow.classList.add('show');
       }
