@@ -52,6 +52,7 @@ function Survey() {
                 <p>All your answers will be totally anonymous. Our project merges art with research and technology so your answers might be used. </p>
                 <p className="second">* is mandatory </p>
             </HeaderCard>
+            
 
         </SurveyContainer>
     )
