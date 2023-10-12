@@ -4,8 +4,9 @@ import { Link, Route, Routes } from 'react-router-dom';
 
 import Home from './Home';
 import Nav from './Nav.jsx';
-import { Login } from './Login';
+import Login from './Login';
 import Hello from './Hello.jsx';
+import Survey from './Survey';
 
 
 
@@ -38,6 +39,7 @@ function App() {
        <Route path='/' element={<Home />} />
        <Route path='/Hello' element={<Hello />} />
        <Route path='/Login' element={<Login />} />
+       <Route path='/Survey' element={<Survey/>} />
       </Routes>
     </>
   )

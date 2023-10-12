@@ -47,7 +47,7 @@ const LoginContainer = styled.div`
 `;
 
 
-export function Login() {
+function Login() {
 
     return (
         <LoginContainer>
@@ -63,3 +63,6 @@ export function Login() {
         </LoginContainer>
     );
 }
+
+
+export default Login;

@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
-import Nav from './Nav';
 
 const HelloContainer = styled.div`
     display: flex;

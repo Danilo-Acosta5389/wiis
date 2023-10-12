@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import Video from './Video';
 import Image from './Image';
 
 const ContactContainer = styled.section`

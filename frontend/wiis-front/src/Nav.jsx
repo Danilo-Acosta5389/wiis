@@ -43,7 +43,7 @@ function Nav() {
                 &nbsp;   <Link to='/login'>Login,</Link><br/>
                 &nbsp;   <Link to='/'>Menu,</Link><br/>
                 &nbsp;   <Link to='/hello'>Hello,</Link><br/>
-                &nbsp;   <Link to='https://docs.google.com/forms/d/e/1FAIpQLSdMp-nVHdB-_KylXQTQMuioF9A5Ch5sG-RnwAXZpIqgKJj8rg/viewform?usp=sf_link' target='_blank'>Survey</Link><br/>
+                &nbsp;   <Link to='/Survey'>Survey</Link><br/>
               {jsonEnd}
               </p>
           </ul>
