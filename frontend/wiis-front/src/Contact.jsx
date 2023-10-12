@@ -24,7 +24,7 @@ const ContactHeader = styled.h1`
   z-index: 1;
   
   &.transform {
-    transform: translateY(-4em);
+    transform: translateY(-5em);
 
 }
 `;
@@ -42,14 +42,20 @@ const ContactInfo = styled.p`
   transition-property: opacity;
   transition-timing-function: linear;
 
+  border-radius: 6px;
+  padding: 8px;
+  background-color: #000000c9;
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.3;
+
   &.show {
     opacity: 1;
-    border-radius: 6px;
-    padding: 8px;
-    background-color: #000000a9;
+    
     transition-delay: 500ms;
     transition-duration: 500ms;
 
+    
   }
 
 `;
@@ -63,7 +69,16 @@ Quisque lobortis metus turpis. Praesent vulputate nibh ut est varius consectetur
 const creepyDude = "https://images.unsplash.com/photo-1559581958-df379578606a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=702&q=80";
 const imageOfLonelyRoad = "https://images.pexels.com/photos/1853542/pexels-photo-1853542.jpeg";
 
+function ContactText() {
+  return(
+    <p>
+      Maecenas vitae consequat sapien. Integer tempor urna eu commodo consequat. 
+      Maecenas aliquet vestibulum ex, in tristique arcu accumsan ut. Sed eleifend scelerisque ullamcorper.
+      Quisque lobortis metus turpis. Praesent vulputate nibh ut est varius consectetur.
+    </p>
 
+  );
+}
 
 function Contact() {
   useEffect(() => {
@@ -94,7 +109,7 @@ function Contact() {
       <ContactContainer>
         <Image source={creepyDude}></Image>
       <ContactHeader className='contactHeader'>Contact</ContactHeader>
-      <ContactInfo className='contactText'>{contactText}</ContactInfo>
+      <ContactInfo className='contactText'><ContactText/ ></ContactInfo>
       </ContactContainer>
   );
 };

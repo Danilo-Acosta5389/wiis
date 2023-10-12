@@ -25,7 +25,7 @@ const AboutHeader = styled.h1`
   z-index: 2;
   
   &.transform {
-    transform: translateY(-5em);
+    transform: translateY(-6em);
 
 }
 `;
@@ -53,19 +53,32 @@ const AboutInfo = styled.p`
   transition-property: opacity;
   transition-timing-function: linear;
 
+  border-radius: 6px;
+  padding: 8px;
+  background-color: #000000c9;
+
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.3;
+
   &.show {
     opacity: 1;
-    border-radius: 6px;
-    padding: 8px;
-    background-color: #000000a9;
     transition-delay: 600ms;
     transition-duration: 500ms;
+    
     
 
   }
 
 `;
 
+function AboutText() {
+  return(
+    <p>Welcome to <br></br>[What is Space], where art, technology, and the power of collective sound converge.
+
+Join us in this immersive journey where technology amplifies human connection, and the collective debate is not just a discussion but an art form. Be part of [What is Space] – where art, technology, and human expression converge in a symphony of innovation.</p>
+  )
+}
 
 
 function About() {
@@ -97,7 +110,7 @@ function About() {
     <AboutContainer>
       <Image source={imageOfWomanLookingInMirror}/>
       <AboutHeader className="aboutHeader">About</AboutHeader>
-      <AboutInfo className="aboutText">{aboutText}</AboutInfo>
+      <AboutInfo className="aboutText"><AboutText/></AboutInfo>
     </AboutContainer>
     );
 };
