@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
+import Video from './Video';
+import Image from './Image';
 
 const ContactContainer = styled.section`
   display: flex;
@@ -42,6 +44,9 @@ const ContactInfo = styled.p`
 
   &.show {
     opacity: 1;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #000000a9;
     transition-delay: 500ms;
     transition-duration: 500ms;
 
@@ -54,6 +59,10 @@ const contactText = `Maecenas vitae consequat sapien. Integer tempor urna eu com
 Maecenas aliquet vestibulum ex, in tristique arcu accumsan ut. Sed eleifend scelerisque ullamcorper. 
 
 Quisque lobortis metus turpis. Praesent vulputate nibh ut est varius consectetur.`;
+
+const creepyDude = "https://images.unsplash.com/photo-1559581958-df379578606a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=702&q=80";
+const imageOfLonelyRoad = "https://images.pexels.com/photos/1853542/pexels-photo-1853542.jpeg";
+
 
 
 function Contact() {
@@ -83,6 +92,7 @@ function Contact() {
 
   return(
       <ContactContainer>
+        <Image source={creepyDude}></Image>
       <ContactHeader className='contactHeader'>Contact</ContactHeader>
       <ContactInfo className='contactText'>{contactText}</ContactInfo>
       </ContactContainer>

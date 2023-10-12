@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import styled, { keyframes } from 'styled-components';
-
+import Image from './Image';
 
 const AboutContainer = styled.section`
   display: flex;
@@ -37,6 +37,9 @@ const aboutText = `Welcome to [What is Space], where art, technology, and the po
 
 Join us in this immersive journey where technology amplifies human connection, and the collective debate is not just a discussion but an art form. Be part of [What is Space] – where art, technology, and human expression converge in a symphony of innovation. `;
 
+
+const imageOfWomanLookingInMirror = "https://images.pexels.com/photos/8108591/pexels-photo-8108591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
 const AboutInfo = styled.p`
   display: flex;
   width: 80vw;
@@ -52,6 +55,9 @@ const AboutInfo = styled.p`
 
   &.show {
     opacity: 1;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #000000a9;
     transition-delay: 600ms;
     transition-duration: 500ms;
     
@@ -89,6 +95,7 @@ function About() {
 
     return(
     <AboutContainer>
+      <Image source={imageOfWomanLookingInMirror}/>
       <AboutHeader className="aboutHeader">About</AboutHeader>
       <AboutInfo className="aboutText">{aboutText}</AboutInfo>
     </AboutContainer>
