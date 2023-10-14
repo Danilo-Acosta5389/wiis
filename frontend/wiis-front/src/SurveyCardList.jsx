@@ -10,7 +10,7 @@ function SurveyCardList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://localhost:7022/api/Question', { method: 'GET' });
+                const response = await fetch('https://wiis.ddns.net/api/Question', { method: 'GET' });
                 const result = await response.json();
                 console.log(result);
                 setQuestion(result)

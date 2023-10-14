@@ -10,23 +10,6 @@ import Survey from './Survey';
 
 
 
-// const bodyContainer = styled.section`
-//   display: flex;
-//   flex-direction: column;
-
-// `;
-
-// const HamburgerContainer = styled.div`
-// align-items: center;
-// z-index: 1;
-// margin: 5em;
-// `;
-
-const VideoBg = styled.video`
-  height: 100vh;
-  z-index: 0;
-  position: fixed;
-`;
 function App() {
 
   return (
