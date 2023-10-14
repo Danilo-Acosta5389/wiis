@@ -1,19 +1,22 @@
 import React, {useEffect} from "react";
 import styled, { keyframes } from 'styled-components';
 
+import SurveyCardList from "./SurveyCardList";
+
 const SurveyContainer = styled.div`
     
     display: flex;
     flex-direction: column;
-    height: 100vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
     font-family: Anton;
+    margin-top: 5rem;
 `;
 
 const HeaderCard = styled.div`
-    /* border: 2px solid red; */
+    border: 2px solid red;
+    
     background-color: gray;
     margin: 1rem;
     border-radius: 10px;
@@ -52,7 +55,7 @@ function Survey() {
                 <p>All your answers will be totally anonymous. Our project merges art with research and technology so your answers might be used. </p>
                 <p className="second">* is mandatory </p>
             </HeaderCard>
-            
+            <SurveyCardList />
 
         </SurveyContainer>
     )
