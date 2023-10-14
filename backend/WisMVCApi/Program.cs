@@ -17,7 +17,7 @@ namespace WisMVCApi
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(CString.connectionString));
+                options.UseMySql(CString.connectionString, ServerVersion.AutoDetect(CString.connectionString)));
 
             builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
             {

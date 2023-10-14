@@ -15,6 +15,15 @@ namespace WisMVCApi.Data
         public DbSet<QuestionsModel> Questions { get; set; }
         public DbSet<AnswersModel> Answers { get; set; }
 
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+
+        //    }
+        //}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Mapping Foreign Keys

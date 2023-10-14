@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 #nullable disable
 
@@ -7,6 +8,7 @@ namespace WisMVCApi.Models
     public class QuestionsModel
     {
         [Key]
+        [NotNull]
         public int Id { get; set; }
 
         [Required]
