@@ -2,8 +2,7 @@
 
 
 :root {
-  /* scroll-snap-type: y proximity; */
-  /* overflow-y: scroll; */
+
   font-family: 'Orbitron', sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -18,7 +17,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
   
 }
 
@@ -31,7 +29,10 @@ body {
 }
 
 /* html {
-  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
 } */
 
