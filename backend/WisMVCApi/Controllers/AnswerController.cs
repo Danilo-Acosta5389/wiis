@@ -20,7 +20,7 @@ namespace WisMVCApi.Controllers
         [HttpGet]
         public async Task<List<AnswersModel>> Get()
         {
-            return await _context.Set<AnswersModel>().ToListAsync();
+            return await _context.Answers.ToListAsync();
         }
 
         // POST: api/survey/{Title}/{Text}

@@ -20,7 +20,7 @@ namespace WisMVCApi
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(CString.connectionString, ServerVersion.AutoDetect(CString.connectionString)));
 
-            builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+            builder.Services.AddCors(p => p.AddPolicy("CorsPolicy", builder =>
             {
                 builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
             }));
@@ -34,11 +34,14 @@ namespace WisMVCApi
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
+            //if (!app.Environment.IsDevelopment())
+            //{
+            //    app.UseHttpsRedirection();
+            //}
 
             app.UseAuthorization();
 
-            app.UseCors("corsapp");
+            app.UseCors("CorsPolicy");
 
             app.MapControllers();
 
