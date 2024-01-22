@@ -13,13 +13,13 @@ namespace WisMVCApi.Models
         public int Id { get; set; }
 
         [AllowNull]
-        public string Text { get; set; }
-
-        [AllowNull]
-        public int? Number { get; set; }
+        public string Answer { get; set; }
 
         [AllowNull]
         public string IpAddress { get; set; }
+
+        [AllowNull]
+        public DateTime DateAndTime { get; set; }
 
         [Required]
         public int QuestionId { get; set; }

@@ -11,14 +11,14 @@ using WisMVCApi.Data;
 namespace WisMVCApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231014020004_init")]
+    [Migration("20240122194503_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.22")
+                .HasAnnotation("ProductVersion", "6.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("WisMVCApi.Models.AnswersModel", b =>
@@ -27,17 +27,17 @@ namespace WisMVCApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("Answer")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("DateAndTime")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("IpAddress")
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("Number")
-                        .HasColumnType("int");
-
                     b.Property<int>("QuestionId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -49,31 +49,36 @@ namespace WisMVCApi.Migrations
                         new
                         {
                             Id = 1,
-                            Number = 5,
+                            Answer = "Yes",
+                            DateAndTime = new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(903),
                             QuestionId = 1
                         },
                         new
                         {
                             Id = 2,
-                            Number = 4,
+                            Answer = "4",
+                            DateAndTime = new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(905),
                             QuestionId = 2
                         },
                         new
                         {
                             Id = 3,
-                            Number = 2,
+                            Answer = "2",
+                            DateAndTime = new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(905),
                             QuestionId = 3
                         },
                         new
                         {
                             Id = 4,
-                            Number = 5,
+                            Answer = "5",
+                            DateAndTime = new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(906),
                             QuestionId = 4
                         },
                         new
                         {
                             Id = 5,
-                            Number = 5,
+                            Answer = "It's ok, i guess.",
+                            DateAndTime = new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(906),
                             QuestionId = 5
                         });
                 });
@@ -83,6 +88,10 @@ namespace WisMVCApi.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("AnswerType")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -100,31 +109,36 @@ namespace WisMVCApi.Migrations
                         new
                         {
                             Id = 1,
-                            Text = "Yes / No/Don’t know what a cyborg is",
+                            AnswerType = "options",
+                            Text = "Yes / No / Don’t know what a cyborg is",
                             Title = "Are we cyborgs?"
                         },
                         new
                         {
                             Id = 2,
+                            AnswerType = "number",
                             Text = "1-5",
                             Title = "Do technology set us free?"
                         },
                         new
                         {
                             Id = 3,
+                            AnswerType = "number",
                             Text = "1-5",
                             Title = "Are you worried about the future?"
                         },
                         new
                         {
                             Id = 4,
+                            AnswerType = "number",
                             Text = "1-5",
                             Title = "Does our job define us?"
                         },
                         new
                         {
                             Id = 5,
-                            Text = "1-5",
+                            AnswerType = "text",
+                            Text = "You can write anything",
                             Title = "How would you describe your mental health?"
                         });
                 });

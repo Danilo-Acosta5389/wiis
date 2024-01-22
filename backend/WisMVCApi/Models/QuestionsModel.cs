@@ -17,6 +17,9 @@ namespace WisMVCApi.Models
         [Required]
         public string Text { get; set; }
 
+        [Required]
+        public string AnswerType { get; set; }
+
         public IEnumerable<AnswersModel> Answers { get; set; }
     }
 }

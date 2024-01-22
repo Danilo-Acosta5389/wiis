@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -21,6 +22,8 @@ namespace WisMVCApi.Migrations
                     Title = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Text = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    AnswerType = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -35,11 +38,11 @@ namespace WisMVCApi.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Text = table.Column<string>(type: "longtext", nullable: true)
+                    Answer = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Number = table.Column<int>(type: "int", nullable: true),
                     IpAddress = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    DateAndTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     QuestionId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -56,26 +59,26 @@ namespace WisMVCApi.Migrations
 
             migrationBuilder.InsertData(
                 table: "Questions",
-                columns: new[] { "Id", "Text", "Title" },
+                columns: new[] { "Id", "AnswerType", "Text", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Yes / No/Don’t know what a cyborg is", "Are we cyborgs?" },
-                    { 2, "1-5", "Do technology set us free?" },
-                    { 3, "1-5", "Are you worried about the future?" },
-                    { 4, "1-5", "Does our job define us?" },
-                    { 5, "1-5", "How would you describe your mental health?" }
+                    { 1, "options", "Yes / No / Don’t know what a cyborg is", "Are we cyborgs?" },
+                    { 2, "number", "1-5", "Do technology set us free?" },
+                    { 3, "number", "1-5", "Are you worried about the future?" },
+                    { 4, "number", "1-5", "Does our job define us?" },
+                    { 5, "text", "You can write anything", "How would you describe your mental health?" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Answers",
-                columns: new[] { "Id", "IpAddress", "Number", "QuestionId", "Text" },
+                columns: new[] { "Id", "Answer", "DateAndTime", "IpAddress", "QuestionId" },
                 values: new object[,]
                 {
-                    { 1, null, 5, 1, null },
-                    { 2, null, 4, 2, null },
-                    { 3, null, 2, 3, null },
-                    { 4, null, 5, 4, null },
-                    { 5, null, 5, 5, null }
+                    { 1, "Yes", new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(903), null, 1 },
+                    { 2, "4", new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(905), null, 2 },
+                    { 3, "2", new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(905), null, 3 },
+                    { 4, "5", new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(906), null, 4 },
+                    { 5, "It's ok, i guess.", new DateTime(2024, 1, 22, 19, 45, 2, 999, DateTimeKind.Utc).AddTicks(906), null, 5 }
                 });
 
             migrationBuilder.CreateIndex(
