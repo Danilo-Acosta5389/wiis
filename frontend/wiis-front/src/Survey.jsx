@@ -7,6 +7,7 @@ const SurveyContainer = styled.div`
 `;
 
 const HeaderCard = styled.div`
+    font-size: large;
     display: flex;
     flex-direction: column;
     max-width: 100%;

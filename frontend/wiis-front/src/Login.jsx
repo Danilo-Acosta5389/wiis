@@ -2,11 +2,13 @@ import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 const LoginContainer = styled.div`
+    font-size: large;
     display: flex;
     flex-direction: column;
 
     & p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        margin-bottom: 2px;
     }
 `;
 
