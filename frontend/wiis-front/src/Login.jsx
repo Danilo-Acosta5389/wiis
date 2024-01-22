@@ -1,64 +1,35 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
-import Nav from './Nav';
-
 const LoginContainer = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-    align-items: center;
-    justify-content: flex-start;
 
-    & h1 {
-        padding-top: 7rem;
+    & p {
+        font-size: 1.3rem;
     }
-
-    & h3 {
-        margin-bottom: 5px;
-        font-size: larger;
-    }
-
-    & input {
-        width: 10rem;
-        height: 1.4rem;
-    }
-
-    & form > button {
-        height: 2.7rem;
-        width: 4rem;
-        font-size: large;
-    }
-/* 
-    & form {
-        display: flex;
-        flex-direction: column;
-
-        button {
-            height: 2rem;
-            width: 3rem;
-        }
-    } */
-
-
-
 `;
+
+const Button = styled.div`
+    
+    font-size: 2rem;
+    cursor: pointer;
+`;
+
 
 
 function Login() {
 
     return (
         <LoginContainer>
-            <h1>Login</h1>
+            <p>[Login]</p>
             <form>
-                <h3>UserName</h3>
+                <p>UserName</p>
                 <input type="text"/>
-                <h3>Passwd</h3>
+                <p>Passwd</p>
                 <input type='password'/>
                 <br></br><br></br>
-                <button>Enter</button>
+                <Button className='button'>[Enter]</Button>
             </form>
         </LoginContainer>
     );
