@@ -8,15 +8,20 @@ import About from './About.jsx'
 import Contact from './Contact.jsx'
 
 
+const MainContainer = styled.div`
+
+
+`;
+
 function Home() {
 
   return (
-    <>
-      <Title />
-      <Survey1 />
+    <MainContainer>
+      <Title/>
       <About />
+      <Survey1 />
       <Contact />
-    </>
+    </MainContainer>
   )
 }
 

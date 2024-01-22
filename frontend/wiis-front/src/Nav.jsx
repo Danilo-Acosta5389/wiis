@@ -3,50 +3,28 @@ import styled from 'styled-components';
 import { Link, Route, Routes } from 'react-router-dom';
 
 const NavContainer = styled.div`
+font-size: 1.5rem;
 display: flex;
 flex-direction: row;
-align-items: center;
-justify-content: center;
-/* border: 3px solid red; */
-height: 5em;
-width: 100%;
-z-index: 2;
-position: fixed;
-min-width: 100vw;
-background-color: #00000088;
+flex-wrap: wrap;
+color: #01a901;
+text-decoration: none;
 
+ & .home-link {
+  text-decoration: none;
+  color: #01a901;
+  
+ }
+ & :hover {
+    color: yellowgreen;
+  }
 `;
-
-const ItemsContainer = styled.div`
-    /* width: 100vw;
-    height: 100vh;
-    opacity: 50%; */
-    background-color: red;
-`;
-
-const jsonStart = "{";
-const jsonEnd = "}";
 
 function Nav() {
     return(
         <>
-        <NavContainer className="navbar">
-            <input className="checkbox" type="checkbox"/>
-            <div className="hamburger-lines">
-              <span className="line line1"></span>
-              <span className="line line2"></span>
-              <span className="line line3"></span>
-            </div>
-            <ul className="menu-items">
-              <p>
-              {jsonStart}<br/>
-                &nbsp;   <Link to='/login'>Login,</Link><br/>
-                &nbsp;   <Link to='/'>Menu,</Link><br/>
-                &nbsp;   <Link to='/hello'>Hello,</Link><br/>
-                &nbsp;   <Link to='/Survey'>Survey</Link><br/>
-              {jsonEnd}
-              </p>
-          </ul>
+        <NavContainer>
+          <span><Link className='home-link' to='/'>root@whatisspace:~</Link><wbr />/<Link className="link" to='/'>Menu</Link>/<Link className="link" to='/login'>Login</Link>/<Link className="link" to='/Survey'>Survey</Link></span> 
         </NavContainer>
         </>
     )

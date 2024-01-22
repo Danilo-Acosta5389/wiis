@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import styled, { keyframes } from 'styled-components';
 
 import SurveyCard from "./SurveyCard";
 
@@ -24,7 +23,17 @@ function SurveyCardList() {
 
     return(
         <>
-            {question.map(q => <SurveyCard title={q.title} text={q.text} type="radio"/>)}
+            {question.map((q, index) =>
+            index === 0 ? (
+            <span>"survey": {"["}<SurveyCard title={q.title} text={q.text} type="radio"/>,</span>
+            ) : ( 
+                index == question.length - 1 ? (
+                <span><SurveyCard title={q.title} text={q.text} type="radio"/>{"]"}</span>
+                ) : (
+                <span><SurveyCard title={q.title} text={q.text} type="radio"/>,</span>
+                ))
+            
+            )}
         </>
     );
 }

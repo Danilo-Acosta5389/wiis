@@ -1,64 +1,20 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import Image from './Image';
 
 const ContactContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  text-shadow: 1px 1px 5px black;
-  height: 100vh;
-  width: 100vw;
-  /* scroll-snap-align: start;
-  scroll-snap-stop: always; */
-  & h1 {
-    position: relative;
-  }
 `;
 
-const ContactHeader = styled.h1`
-  cursor: pointer;
-  transition-duration: 800ms;
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
-  z-index: 1;
-  
-  &.transform {
-    transform: translateY(-3.2em);
-
-}
+const ContactHeader = styled.p`
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
 `;
 
 const ContactInfo = styled.p`
-  display: flex;
+  max-width: 100%;
   width: 80vw;
-  height: fit-content;
-  text-align: center;
-  flex-wrap: wrap;
-  position: absolute;
-  z-index: 0;
-  opacity: 0;
-  transition-duration: 300ms;
-  transition-property: opacity;
-  transition-timing-function: linear;
-
-  border-radius: 6px;
-  padding: 8px;
-  background-color: #000000c9;
-  font-size: 19px;
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.3;
-
-  max-width: 300px;
-
-  &.show {
-    opacity: 1;
-    
-    transition-delay: 500ms;
-    transition-duration: 500ms;
-
-    
-  }
-
+  margin-top: 0;
+  padding-top: 0;
 `;
 
 const contactText = `Maecenas vitae consequat sapien. Integer tempor urna eu commodo consequat. 
@@ -67,52 +23,19 @@ Maecenas aliquet vestibulum ex, in tristique arcu accumsan ut. Sed eleifend scel
 
 Quisque lobortis metus turpis. Praesent vulputate nibh ut est varius consectetur.`;
 
-const creepyDude = "https://images.unsplash.com/photo-1559581958-df379578606a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=702&q=80";
-const imageOfLonelyRoad = "https://images.pexels.com/photos/1853542/pexels-photo-1853542.jpeg";
 
-function ContactText() {
-  return(
-    <span>
-      Email us: digitalMdnezz@wis.online
-      <br></br>
-      <br></br>
-      Find us: Maecenas aliquet 89, 112 91, Barcelona.
-      <br></br>
-    </span>
-
-  );
-}
 
 function Contact() {
-  useEffect(() => {
-    const contactSelect = document.querySelector('.contactHeader');
-    const contactTextShow = document.querySelector('.contactText');
-    
-    let clicked = false;
-    const handleClick = () => {
-      if (clicked) {
-        contactSelect.classList.remove('transform');
-        contactTextShow.classList.remove('show');
-      } else {
-        // console.log('clicked');
-        contactSelect.classList.add('transform');
-        contactTextShow.classList.add('show');
-      }
-      clicked = !clicked;
-    };
-
-      contactSelect.addEventListener('click', handleClick);
-      // clicked = true;
-      return () => {
-        contactSelect.removeEventListener('click', handleClick);
-      };
-  }, []);
 
   return(
       <ContactContainer>
-        <Image source={creepyDude}></Image>
-      <ContactHeader className='contactHeader'>Contact</ContactHeader>
-      <ContactInfo className='contactText'><ContactText/ ></ContactInfo>
+      <ContactHeader className='contactHeader'>[Contact]</ContactHeader>
+      <ContactInfo className='contactText'>
+        Email us: digitalMdnezz<wbr/>@wis.online
+        <br></br>
+        Find us: Maecenas aliquet 89, 112 91, Barcelona.
+        <br></br>
+      </ContactInfo>
       </ContactContainer>
   );
 };
