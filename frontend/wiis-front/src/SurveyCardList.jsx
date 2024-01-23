@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import ProgressBar from './assets/ProgressBar.jsx';
 
 import SurveyCard from "./SurveyCard";
 import styled from "styled-components";
@@ -11,9 +12,6 @@ const Container = styled.div`
 
 
 function SurveyCardList() {
-
-    
-
     const [question, setQuestion] = useState([])
 
     useEffect(() => {
@@ -33,7 +31,9 @@ function SurveyCardList() {
 
     return(
         <Container>
-            {question.map((q, index) =>
+            {question.length <= 1 ? 
+            <p>Loading: <br/><ProgressBar ms={50} /><wbr/></p>  :
+            question.map((q, index) =>
             index === 0 ? (
             <span>"survey": {"["}<SurveyCard title={q.title} text={q.text} decor="," type="radio"/></span>
             ) : ( 

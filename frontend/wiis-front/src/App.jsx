@@ -1,11 +1,10 @@
 import React from 'react'
-import styled from 'styled-components';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import Home from './Home';
 import Nav from './Nav.jsx';
 import Login from './Login';
-import Survey from './Survey';
+import Survey from './SurveyPage.jsx';
 
 
 
