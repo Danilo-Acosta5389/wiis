@@ -31,7 +31,7 @@ function SurveyCardList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://api.whatisspace.online/api/question2', { method: 'GET' });
+                const response = await fetch('https://api.whatisspace.online/api/question', { method: 'GET' });
                 const result = await response.json();
                 console.log(result);
                 setQuestion(result)
