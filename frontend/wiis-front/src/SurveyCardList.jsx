@@ -31,7 +31,7 @@ function SurveyCardList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://api.whatisspace.online/api/question', { method: 'GET' });
+                const response = await fetch('https://api.whatisspace.online/api/question2', { method: 'GET' });
                 const result = await response.json();
                 console.log(result);
                 setQuestion(result)
@@ -51,7 +51,7 @@ function SurveyCardList() {
     return(
         <Container>
             {question.length < 1 ? 
-            <p>Loading: <br/><ProgressBar ms={50} /><wbr/></p>  :
+            <p>Loading: <br/><ProgressBar ms={80} /><wbr/></p>  :
             <form onSubmit={submit}>
             {question.map((q, index) =>
             index === 0 ? (
