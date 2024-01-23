@@ -1,8 +1,7 @@
-import React, {useEffect} from "react";
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-import Video from "./Video";
 
 const SurveyContainer = styled.section`
 `;

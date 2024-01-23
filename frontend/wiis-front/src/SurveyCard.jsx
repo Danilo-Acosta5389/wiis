@@ -33,10 +33,7 @@ function SurveyCard(props) {
     return(
         <>
             <CardContainer>
-                <form>
-                    
-                <p>{"{"}<br/>"{props.title}" : <span><br/>" <span className="second">* </span><wbr/>{props.text}"</span><br/>{"}"}{props.decor}</p>
-                </form>
+                <label>{"{"}<br/>"{props.title}" : <span><br/>" <span className="second">* </span><wbr/>{props.text}"</span><br/>{"}"}{props.decor}</label>
             </CardContainer>
             
         </>

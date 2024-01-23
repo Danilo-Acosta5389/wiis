@@ -6,10 +6,24 @@ import styled from "styled-components";
 
 
 const Container = styled.div`
-    
-
 `;
 
+const Button = styled.button`
+    margin-top: 1rem;
+    color: yellow;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+
+     padding: 0;
+     border: 0;
+     background: none;
+     box-shadow: none;
+
+    &:hover {
+      color: yellowgreen;
+    }
+`;
 
 function SurveyCardList() {
     const [question, setQuestion] = useState([])
@@ -28,22 +42,32 @@ function SurveyCardList() {
         fetchData();
     }, []);
 
+    const submit = (event) => {
+        console.log("Submitted")
+        event.preventDefault();
+    }
+
 
     return(
         <Container>
+            <form onSubmit={submit}>
             {question.length <= 1 ? 
             <p>Loading: <br/><ProgressBar ms={50} /><wbr/></p>  :
             question.map((q, index) =>
             index === 0 ? (
-            <span>"survey": {"["}<SurveyCard title={q.title} text={q.text} decor="," type="radio"/></span>
+            <span>"survey": {"["}<SurveyCard title={q.title} text={q.text} decor=","/></span>
             ) : ( 
                 index == question.length - 1 ? (
-                <span><SurveyCard title={q.title} text={q.text} type="radio"/>{"]"}</span>
+                <span><SurveyCard title={q.title} text={q.text}/>{"]"}</span>
                 ) : (
-                <span><SurveyCard title={q.title} text={q.text} decor="," type="radio"/></span>
+                <span><SurveyCard title={q.title} text={q.text} decor=","/></span>
                 ))
             
             )}
+            <br/>
+            <Button>[Submit]</Button>
+            {/* <button type="submit">[Submit]</button> */}
+            </form>
         </Container>
     );
 }
