@@ -39,9 +39,9 @@ function SurveyCardList() {
                 console.log('Errorrr: ', error)
             }
         };
-        fetchData();
+        fetchData(); 
     }, []);
-
+ //asdas
     const submit = (event) => {
         console.log("Submitted")
         event.preventDefault();
