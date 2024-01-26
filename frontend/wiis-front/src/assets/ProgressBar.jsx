@@ -16,12 +16,20 @@ function ProgressBar(props) {
       setProgress(`[${dots}${empty}] ${i * 5}%`)
       await wait(props.ms)
     }
+    props.setState("DONE");
   } 
+  
   progressBar();
+  
   function wait(ms) {
   return new Promise(res => setTimeout(res, ms))
   }
+  
   }, [])
+
+  
+  
+  
   return (
     <span>{props.msg}{progress}</span>
   )

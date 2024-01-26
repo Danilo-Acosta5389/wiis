@@ -27,6 +27,7 @@ const Button = styled.button`
 
 function SurveyCardList() {
     const [question, setQuestion] = useState([])
+    const [state, setState] = useState("LOADING")
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,17 +41,23 @@ function SurveyCardList() {
             }
         };
         fetchData(); 
+        console.log(state)
+        
     }, []);
     const submit = (event) => {
         console.log("Submitted")
         event.preventDefault();
     }
 
+    const changeState = (newState) => {
+        setState(newState);
+    };
+
 
     return(
         <Container>
-            {question.length < 1 ? 
-            <p>Loading: <br/><ProgressBar ms={80} /><wbr/></p>  :
+            {state === "LOADING" ? 
+            <p>Loading survey: <br/><ProgressBar setState={changeState} ms={80} /><wbr/></p>  :
             <form onSubmit={submit}>
             {question.map((q, index) =>
             index === 0 ? (
