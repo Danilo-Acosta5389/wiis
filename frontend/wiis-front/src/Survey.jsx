@@ -10,11 +10,15 @@ const SurveyHeader = styled.p`
   font-size: 1.5rem;
   cursor: pointer;
   margin-bottom: 0;
- padding-bottom: 5px;
-  & .survey-link {
-    color: inherit;
-    text-decoration: none;
-  }
+  padding-bottom: 5px;
+   & .survey-link {
+     color: yellow;
+     text-decoration: none;
+
+   }
+   :hover {
+   color: yellowgreen;
+   }
 `;
 function Survey() {
     return(

@@ -4,9 +4,12 @@ import styled, { keyframes } from 'styled-components';
 
 const CardContainer = styled.div`
     margin-left: 1rem;
-    
-    max-width: 300px;
+    max-width: 500px;
     width: 100%;
+
+    @media (max-width: 400px) {
+        max-width: 300px;
+    }
 
     & p {
         margin-bottom: 2px;

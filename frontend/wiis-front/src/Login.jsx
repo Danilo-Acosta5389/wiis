@@ -16,6 +16,10 @@ const Button = styled.div`
     
     font-size: 2rem;
     cursor: pointer;
+    color: yellow;
+    &:hover {
+    color: yellowgreen;
+}
 `;
 
 
