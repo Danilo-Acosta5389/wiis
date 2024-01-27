@@ -17,6 +17,20 @@ input {
   height: 1.5rem;
 }
 
-/* .button:hover {
-  color: yellowgreen;
-} */
+.customRange {
+  -webkit-appearance: none;
+  appearance: none;
+  background: white;
+  height: 1px;
+  cursor: pointer;
+  width: 15rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: 0px; /* Centers thumb on the track */
+  background-color: white;
+  height: 2rem;
+  width: 1rem;
+}

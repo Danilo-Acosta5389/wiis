@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 
 
@@ -13,7 +13,20 @@ const MainContainer = styled.div`
 
 `;
 
+const inputCont = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+
+`;
+
+
 function Home() {
+  const [number, setNumber] = useState(1);
+
+  function handleSubmit() {
+    setNumber(rangeId)
+    console.log(number);
+  }
 
   return (
     <MainContainer>
@@ -21,6 +34,14 @@ function Home() {
       <About />
       <Survey1 />
       <Contact />
+      <form onSubmit={() => handleSubmit()}>
+        <inputCont>
+       <input id='rangeId'className='customRange' type="range" min={1} max={5}/>
+       <p>value: <output id="rangeId"></output></p>
+      </inputCont>
+      <button type="submit">Go</button>
+      </form>
+      
     </MainContainer>
   )
 }
